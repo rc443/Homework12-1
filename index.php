@@ -75,5 +75,13 @@ switch($action) {
 	//Create expiration date in the past
 	$params = session_get_cookie_params();
 
+	//Get session params
+	$path = $params['path'];
+	$domain = $params['domain'];
+	$secure = $params['secure'];
+	$httponly = $params['secure'];
+	setcookie($name, '', $expire, $path, $domain, $secure, $httponly);
+	include('cart_view.php');
+	break;
 }
 ?>
