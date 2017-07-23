@@ -1,4 +1,4 @@
-<!DOCTYP">
+<!DOCTYPE>
 <htm">
 <head>
     <title>My Guitar Shop</title>
