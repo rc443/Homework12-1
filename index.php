@@ -58,5 +58,22 @@ switch($action) {
         unset($_SESSION['cart12']);
         include('cart_view.php');
         break;
+    case 'end_session':
+
+    	//Clear session data from memory
+	$_Session = array();
+
+	//Clean up session ID
+	session_destroy();
+
+	//Delete the cookie for the session
+	$name = session_name();
+
+	//Get name of the session cookie
+	$expire = strtotime('-1 year ');
+
+	//Create expiration date in the past
+	$params = session_get_cookie_params();
+
 }
 ?>
